@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName
  */
 
 data class OpenAIRequest(
-    val model: String = "gpt-3.5-turbo",
+    val model: String = "gpt-4o-mini",
     val messages: List<ChatMessage>,
     @SerializedName("max_tokens")
     val maxTokens: Int = 500,
