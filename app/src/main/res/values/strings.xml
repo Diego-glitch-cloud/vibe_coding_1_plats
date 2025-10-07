@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">VibeCoding1</string>
+    <string name="app_name">TuneChat</string>
+    <string name="send_message">Enviar mensaje</string>
+    <string name="message_hint">Escribe un mensaje...</string>
+    <string name="error_message">Error al enviar mensaje</string>
+    <string name="welcome_message">¡Hola! Soy TuneChat 🎵</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.diegocal.vibecoding1
+package com.diegocal.tunechat
 
 import org.junit.Test
 

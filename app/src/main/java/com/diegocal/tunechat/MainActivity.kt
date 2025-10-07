@@ -1,4 +1,4 @@
-package com.diegocal.vibecoding1
+package com.diegocal.tunechat
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,41 +7,30 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.diegocal.vibecoding1.ui.theme.VibeCoding1Theme
+import com.diegocal.tunechat.data.network.RetrofitClient
+import com.diegocal.tunechat.ui.screens.ChatScreen
+import com.diegocal.tunechat.ui.theme.TuneChatTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Configurar API Key (debe reemplazarse con la key real)
+        // IMPORTANTE: En producción, usar una forma más segura de almacenar la API key
+        RetrofitClient.setApiKey(BuildConfig.OPENAI_API_KEY)
+
         enableEdgeToEdge()
         setContent {
-            VibeCoding1Theme {
+            TuneChatTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                    ChatScreen(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(innerPadding)
                     )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    VibeCoding1Theme {
-        Greeting("Android")
     }
 }

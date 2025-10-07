@@ -1,4 +1,4 @@
-package com.diegocal.vibecoding1
+package com.diegocal.tunechat
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
