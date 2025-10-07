@@ -1,5 +1,6 @@
 package com.diegocal.tunechat.data.repository
 
+import android.util.Log
 import com.diegocal.tunechat.data.network.ChatMessage
 import com.diegocal.tunechat.data.network.OpenAIConstants
 import com.diegocal.tunechat.data.network.OpenAIRequest
@@ -36,6 +37,7 @@ class ChatRepository {
                 )
 
                 val response = apiService.getChatCompletion(request)
+                Log.d("OpenAI_Response", response.toString())
 
                 // Extraer la respuesta del asistente
                 val assistantMessage = response.choices.firstOrNull()?.message?.content

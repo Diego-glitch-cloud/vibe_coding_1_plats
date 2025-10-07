@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -18,7 +20,14 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         // Configuración para BuildConfig
-        buildConfigField("String", "OPENAI_API_KEY", "\"\"")
+        val localProps = rootProject.file("local.properties")
+        val apiKey: String = if (localProps.exists()) {
+            val props = Properties()
+            props.load(localProps.inputStream())
+            props.getProperty("OPENAI_API_KEY") ?: ""
+        } else ""
+        buildConfigField("String", "OPENAI_API_KEY", "\"$apiKey\"")
+
     }
 
     buildTypes {
