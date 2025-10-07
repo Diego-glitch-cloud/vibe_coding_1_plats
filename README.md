@@ -1,4 +1,6 @@
 # TuneChat - Aplicación de Recomendaciones Musicales 🎵
+# Diego Andre Calderón Salazar - 241263
+# Hugo Roberto Mendez Lee - 241265
 
 ## Descripción
 TuneChat es una aplicación Android nativa que utiliza la API de OpenAI para proporcionar recomendaciones musicales personalizadas mediante un chat interactivo.
