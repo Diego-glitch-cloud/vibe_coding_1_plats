@@ -101,15 +101,6 @@ app/src/main/java/com/diegocal/tunechat/
 6. **Modo offline**: Caché de conversaciones anteriores
 7. **Temas personalizables**: Modo oscuro y otros esquemas de color
 
-## Costos de la API
-
-⚠️ **IMPORTANTE**: La API de OpenAI es de pago. Considera lo siguiente:
-
-- **GPT-3.5-turbo**: ~$0.002 por 1K tokens (económico)
-- **GPT-4**: Más costoso pero mejores respuestas
-- Configura **límites de uso** en tu cuenta de OpenAI
-- Monitorea el consumo en el dashboard de OpenAI
-
 ## Solución de Problemas
 
 ### Error: "Failed to connect"
